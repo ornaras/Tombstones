@@ -1,8 +1,10 @@
 package ru.ornaras.tombstones;
 
+import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Plugin extends JavaPlugin {
+    public static final Material TombstoneMaterial = Material.BARRIER;
 
     @Override
     public void onEnable() {
