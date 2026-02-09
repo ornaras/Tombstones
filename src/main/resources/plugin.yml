@@ -1,5 +1,5 @@
 name: Tombstones
-version: '1.0-SNAPSHOT'
+version: '0.1'
 main: ru.ornaras.tombstones.Plugin
 api-version: '1.19'
 authors: [ ornaras ]
