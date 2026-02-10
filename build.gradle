@@ -18,6 +18,14 @@ dependencies {
     compileOnly("org.spigotmc:spigot-api:1.19.4-R0.1-SNAPSHOT")
 }
 
+sonar {
+    properties {
+        property "sonar.projectKey", "ornaras_Tombstones"
+        property "sonar.organization", "ornaras"
+        property "sonar.host.url", "https://sonarcloud.io/"
+    }
+}
+
 tasks {
     runServer {
         // Configure the Minecraft version for our task.
