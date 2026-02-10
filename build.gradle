@@ -53,3 +53,28 @@ processResources {
         expand props
     }
 }
+
+tasks.javadoc {
+    options.encoding = 'UTF-8'
+    options.charSet = 'UTF-8'
+    options.author = true
+    options.version = true
+
+    options.links(
+            'https://docs.oracle.com/en/java/javase/17/docs/api/',
+            'https://hub.spigotmc.org/javadocs/spigot/'
+    )
+
+    options.addStringOption('Xdoclint:none', '-quiet')
+    classpath += configurations.compileClasspath
+}
+
+tasks.register('javadocJar', Jar) {
+    dependsOn tasks.javadoc
+    from tasks.javadoc
+    archiveClassifier.set('javadoc')
+}
+
+artifacts {
+    archives tasks.javadocJar
+}
